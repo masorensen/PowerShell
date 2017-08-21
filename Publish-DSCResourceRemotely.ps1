@@ -1,5 +1,7 @@
-﻿function Publish-DSCResourceRemotely {
-Param(
+﻿function Publish-DSCResourceRemotely
+{
+Param
+(
     [string[]]$Module,
     [string]$ComputerName
 )
