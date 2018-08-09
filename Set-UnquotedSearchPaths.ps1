@@ -2,7 +2,7 @@
 #The following code will prompt for elevation if not already elevated
 if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {   
     $Arguments = "& '" + $MyInvocation.MyCommand.Definition + "'"
-    #This opens a new PowerShell module, running as administrator
+    #This opens a new PowerShell session, running as administrator
     Start-Process powershell -Verb runAs -ArgumentList $Arguments
     break
 }
