@@ -1,0 +1,1 @@
+(Get-Item $pwd).FullName
