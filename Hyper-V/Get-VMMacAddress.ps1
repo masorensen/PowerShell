@@ -1,0 +1,1 @@
+﻿Get-VM | Get-VMNetworkAdapter | Format-Table VMName, MACAddress
