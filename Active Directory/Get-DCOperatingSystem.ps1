@@ -1,0 +1,1 @@
+Get-ADDomainController -Filter * -Server "i.midamerican.com" | select name, operatingsystem
