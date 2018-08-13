@@ -1,21 +1,4 @@
-﻿<# .SYNOPSIS 
-      Export of all SSRS reports datasources and images 
-   .DESCRIPTION 
-      This PowerShell script exports all (or filtered) reports, data sources and images directly from the ReportServer database 
-      to a specified folder. For the file name the complete report path is used; for file name invalid characters are replaced with a -. 
-      Reports are exported with .rdl as extension, data sources with .rds and resources without any additional extension. 
-      Please change the "Configuration data" below to your enviroment. 
-      Works with SQL Server 2005 and higher versions in all editions. 
-      Requires SELECT permission on the ReportServer database. 
-   .NOTES 
-      Author  : Olaf Helper 
-      Requires: PowerShell Version 1.0, Ado.Net assembly 
-   .LINK 
-      GetSqlBinary: http://msdn.microsoft.com/en-us/library/system.data.sqlclient.sqldatareader.getsqlbinary.aspx 
-#> 
- 
- 
-# Configuration data 
+﻿# Configuration data 
 [string] $server   = ".\";        # SQL Server Instance. 
 [string] $database = "ReportServer_WVSouthBerkely";        # ReportServer Database. 
 [string] $folder   = "C:\ReportExport_WV_SouthBerkely";          # Path to export the reports to. 
